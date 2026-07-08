@@ -1,0 +1,80 @@
+APT Memory Forensics — Model Evaluation Report
+CV Strategy : GroupKFold by dump_id  |  Folds: 5
+Samples     : 3804  |  Features: 21
+Benign      : 476  |  Malicious: 3328
+============================================================
+
+────────────────────────────────────────
+Model         : Logistic Regression
+F1            : 0.1224 ± 0.0059
+Precision     : 1.0000 ± 0.0000
+Recall        : 0.0652 ± 0.0033
+ROC-AUC       : 0.5867 ± 0.0063
+Train F1      : 0.1214
+Overfit Gap   : -0.0010  ✓ LOW — model is generalising
+Per-fold F1   : [0.117, 0.12, 0.131, 0.127, 0.116]
+
+Classification Report (OOF):
+              precision    recall  f1-score   support
+
+      Benign       0.13      1.00      0.23       476
+   Malicious       1.00      0.07      0.12      3328
+
+    accuracy                           0.18      3804
+   macro avg       0.57      0.53      0.18      3804
+weighted avg       0.89      0.18      0.14      3804
+
+Confusion Matrix:
+[[ 476    0]
+ [3111  217]]
+
+────────────────────────────────────────
+Model         : Random Forest
+F1            : 0.5381 ± 0.0110
+Precision     : 0.9984 ± 0.0020
+Recall        : 0.3684 ± 0.0105
+ROC-AUC       : 0.9055 ± 0.0128
+Train F1      : 0.5415
+Overfit Gap   : 0.0034  ✓ LOW — model is generalising
+Per-fold F1   : [0.537, 0.524, 0.532, 0.557, 0.541]
+
+Classification Report (OOF):
+              precision    recall  f1-score   support
+
+      Benign       0.18      1.00      0.31       476
+   Malicious       1.00      0.37      0.54      3328
+
+    accuracy                           0.45      3804
+   macro avg       0.59      0.68      0.42      3804
+weighted avg       0.90      0.45      0.51      3804
+
+Confusion Matrix:
+[[ 474    2]
+ [2103 1225]]
+
+────────────────────────────────────────
+Model         : XGBoost
+F1            : 0.6442 ± 0.0104
+Precision     : 0.9993 ± 0.0013
+Recall        : 0.4754 ± 0.0113
+ROC-AUC       : 0.8894 ± 0.0118
+Train F1      : 0.6483
+Overfit Gap   : 0.0041  ✓ LOW — model is generalising
+Per-fold F1   : [0.645, 0.625, 0.645, 0.649, 0.657]
+
+Classification Report (OOF):
+              precision    recall  f1-score   support
+
+      Benign       0.21      1.00      0.35       476
+   Malicious       1.00      0.48      0.64      3328
+
+    accuracy                           0.54      3804
+   macro avg       0.61      0.74      0.50      3804
+weighted avg       0.90      0.54      0.61      3804
+
+Confusion Matrix:
+[[ 475    1]
+ [1747 1581]]
+
+============================================================
+Best model by F1: XGBoost  (F1=0.6442 ± 0.0104)

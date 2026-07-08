@@ -1,0 +1,23 @@
+Total features after selection: 21
+
+proc_peb_mismatch
+masquerade_score
+masq_csrss
+parent_also_suspicious
+dll_path_anomaly
+dll_outside_sys32
+handle_high_privilege_target_count
+beacon_pattern
+hollow_process_indicator
+name_entropy
+min_lev_distance
+instance_count
+is_elevated
+child_count
+dll_count
+dll_name_entropy_avg
+handle_count
+thread_count
+external_conn_count
+unique_remote_ips
+rare_listen_port

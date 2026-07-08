@@ -1,0 +1,4 @@
+Model,F1_mean,F1_std,Precision_mean,Precision_std,Recall_mean,Recall_std,ROC_AUC_mean,ROC_AUC_std,Train_F1,Overfit_Gap
+Logistic Regression,0.1224,0.0059,1.0,0.0,0.0652,0.0033,0.5867,0.0063,0.1214,-0.001
+Random Forest,0.5381,0.011,0.9984,0.002,0.3684,0.0105,0.9055,0.0128,0.5415,0.0034
+XGBoost,0.6442,0.0104,0.9993,0.0013,0.4754,0.0113,0.8894,0.0118,0.6483,0.0041
